@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "207ef668-dbfc-4813-a854-82af763820bb",
+		"name": "Global Impact",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "iRR Score",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "global_impact.7scqOkI-.vdajs7tzit1KkAo_",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "test",
+						"value": "test",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"impact_multiplier\": 0.8,\n    \"units_delivered\": 120320,\n    \"goal\": 300,\n    \"time_period\": 3,\n    \"cost\": 21312312321,\n    \"log_base\": 100\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/irr_score",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"irr_score"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Impact Multiplier",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "global_impact.CiSHk_JR.RLzthaeGz1ATpKKP",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    /* Must select only 8 of the following */\n    \"accessibility\": 0,\n    \"educational_attainment\": 2,\n    \"household_income_vs_national_median\": 1,\n    \"inequality\": 0,\n    \"poverty\": 4,\n    \"resident_demographic\": 2,\n    \"unemployment_vs_national_average\": 3,\n    \"fossil_fuel_energy_use\": 2,\n    \"housing_cost_burden\": 1,\n    \"housing_rentals\": 0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/impact_potential",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"impact_potential"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "All available Params",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    /* Must select only 8 of the following */\n    \"accessibility\": 0,\n    \"educational_attainment\": 2,\n    \"household_income_vs_national_median\": 1,\n    \"inequality\": 0,\n    \"poverty\": 4,\n    \"resident_demographic\": 2,\n    \"unemployment_vs_national_average\": 3,\n    \"fossil_fuel_energy_use\": 2,\n    \"housing_cost_burden\": 1,\n    \"housing_rentals\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Localhost}}/api/impact_potential",
+							"host": [
+								"{{Localhost}}"
+							],
+							"path": [
+								"api",
+								"impact_potential"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "cache-control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "content-length",
+							"value": "41"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "date",
+							"value": "Wed, 07 Jul 2021 17:06:30 GMT"
+						},
+						{
+							"key": "server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "x-request-id",
+							"value": "Fo-RJ9W4jECPuKQAABYi"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"errors\": {\n        \"http\": [\n            \"401: Unauthorized\"\n        ]\n    }\n}"
+				}
+			]
+		}
+	]
+}
