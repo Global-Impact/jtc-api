@@ -1,0 +1,12 @@
+# App artifacts
+/_build
+/db
+/deps
+/*.ez
+/.elixir_ls
+coverage
+/cover
+.nyc_output
+.idea/
+*.iml
+.DS_Store
