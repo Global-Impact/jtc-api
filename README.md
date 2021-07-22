@@ -12,12 +12,26 @@ curl --location --request POST 'https://global-impact-prod.revelry-prod.revelry.
 --data-raw '{
     "impact_multiplier": 0.8,
     "units_delivered": 120320,
-    "goal": 300,
+    "goal": 500,
     "time_period": 3,
-    "cost": 21312312321,
+    "cost": 73000000,
     "log_base": 100
 }'
 ```
+
+Yields a json response of 
+
+```
+{
+    "data": {
+        "irr_score": 37.13
+    }
+}
+```
+
+Where `37.13` is equal to an iRR of `37.13%`
+
+
 ### Impact Potential Endpoint
 ```
 curl --location --request POST 'https://global-impact-prod.revelry-prod.revelry.net/api/impact_potential' \
