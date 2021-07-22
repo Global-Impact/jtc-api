@@ -7,7 +7,7 @@
 ## IRR Score Endpoint
 ```
 curl --location --request POST 'https://global-impact-prod.revelry-prod.revelry.net/api/irr_score' \
---header 'Authorization: Bearer global_impact.7scqOkI-.vdajs7tzit1KkAo_' \
+--header 'Authorization: Bearer <YOUR API KEY HERE>' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "impact_multiplier": 0.8,
@@ -35,7 +35,7 @@ Where `37.13` is equal to an iRR of `37.13%`
 ### Impact Potential Endpoint
 ```
 curl --location --request POST 'https://global-impact-prod.revelry-prod.revelry.net/api/impact_potential' \
---header 'Authorization: Bearer global_impact.CiSHk_JR.RLzthaeGz1ATpKKP' \
+--header 'Authorization: Bearer <YOUR API KEY HERE>' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "accessibility": 0,
