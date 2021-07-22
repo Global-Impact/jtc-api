@@ -1,5 +1,7 @@
 ## Using JTC API
+
 1.) Generate an API key `https://global-impact-prod.revelry-prod.revelry.net/user/api-key` (available for admins only)
+
 2.) Use the generated api key as an auth-bearer token in your request
 
 ## IRR Score Endpoint
